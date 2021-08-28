@@ -4,8 +4,16 @@ const endpoints = `https://api.imgbb.com/1/upload?key=${API_KEY}`;
 let data;
 window.onload = () => {
 	const input = document.getElementById('uploadFile');
+	const preview = document.getElementById('preview');
 	input.addEventListener('change', async (e) => {
 		data = e.target.files[0];
+		const url = new FileReader();
+
+		url.readAsDataURL(data);
+		url.addEventListener('load', () => {
+			preview.innerHTML = `<img src=${url.result} alt="Couldn't Load"/>`;
+		});
+		console.log(url);
 	});
 
 	const button = document.getElementById('upload');
