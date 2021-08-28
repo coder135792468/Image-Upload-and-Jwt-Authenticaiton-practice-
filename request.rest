@@ -1,0 +1,27 @@
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "name": "rose"
+}
+
+##########
+GET http://localhost:5000/api/post
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoicm9zZSIsImlhdCI6MTYzMDEzMjQ2M30.IKMY8cwqsOlC_LAZcC75_nRq2_fBe6rV3-Ii1qS6Ktc
+##########
+
+
+GET http://localhost:5000/api/post/all
+
+
+##########
+POST http://localhost:5000/api/post
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoicm9zZSIsImlhdCI6MTYzMDEzMjQ2M30.IKMY8cwqsOlC_LAZcC75_nRq2_fBe6rV3-Ii1qS6Ktc
+
+{
+    "message":"hello",
+    "avatar":"images/bandar.png"
+}
